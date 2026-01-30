@@ -1,2 +1,6 @@
 #!/bin/bash
-sed -n 'p;n'
+while read -r LINE
+do
+    echo "$LINE"
+    read -r SKIP
+done

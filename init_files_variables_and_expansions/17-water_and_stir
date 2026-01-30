@@ -1,2 +1,2 @@
 #!/bin/bash
-python3 -c "n=int('30012412301', 5) + int('12421231313', 5); c='0123456789abc'; r=''; [(r := c[n % 13] + r, n := n // 13) for _ in range(20) if n > 0]; print(r)" | tr 0123456789abc shtbeolhc
+printf "%o\n" $(($((5#$(echo $WATER | tr water 01234))) + $((5#$(echo $STIR | tr stir. 01234))))) | tr 01234567 bestchol

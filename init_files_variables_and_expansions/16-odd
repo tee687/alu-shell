@@ -1,2 +1,2 @@
 #!/bin/bash
-paste -d, - - | cut -d, -f1
+while read LINE; do echo "$LINE"; read SKIP; done

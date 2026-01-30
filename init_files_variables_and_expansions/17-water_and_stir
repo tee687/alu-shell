@@ -1,2 +1,2 @@
 #!/bin/bash
-printf "%x\n" $(( 5#$(echo $WATER | tr water 01234) + 5#$(echo $STIR | tr stir. 01234) )) | tr 0123456789abcdef bestcholhc
+python3 -c "n=int(\"$(echo $WATER | tr water 01234)\", 5) + int(\"$(echo $STIR | tr stir. 01234)\", 5); chars=\"bestcholhcabc\"; res=\"\"; exec(\"while n > 0:\\n  res = chars[n % 13] + res\\n  n //= 13\"); print(res if res else chars[0])"

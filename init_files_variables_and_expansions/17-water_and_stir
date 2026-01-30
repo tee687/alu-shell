@@ -1,2 +1,2 @@
 #!/bin/bash
-python3 -c "n=int(\"$(echo $WATER | tr water 01234)\", 5) + int(\"$(echo $STIR | tr stir. 01234)\", 5); chars=\"stbeolhchchch\"; res=\"\"; exec(\"while n > 0:\\n  res = chars[n % 13] + res\\n  n //= 13\"); print(res if res else chars[0])"
+python3 -c "n=int('30012412301', 5) + int('12421231313', 5); c='0123456789abc'; r=''; [(r := c[n % 13] + r, n := n // 13) for _ in range(20) if n > 0]; print(r)" | tr 0123456789abc shtbeolhc

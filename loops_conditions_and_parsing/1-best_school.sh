@@ -1,9 +1,0 @@
-#!/usr/bin/bash
-
-counter=1
-while [ $counter -le 10 ]
-
-do
-	echo "Best School"
-	counter=$((counter + 1))
-done

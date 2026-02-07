@@ -1,10 +1,4 @@
 #!/usr/bin/env bash
-# This script displays To infinity and beyond indefinitely and traps SIGTERM
-trap 'echo "I am invincible!!!"' SIGTERM
-
-while true
-do
-    echo "To infinity and beyond"
-    sleep 2
-done
+# This script sends a SIGTERM to 7-highlander
+pkill -f 7-highlander
 

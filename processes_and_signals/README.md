@@ -1,1 +1,1 @@
-Project: Processes and signals
+Tasks for learning about processes and signals in Bash

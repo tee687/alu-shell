@@ -1,0 +1,28 @@
+#!/usr/bin/env bash
+# This script manages a PID file and handles multiple signals
+
+# Save its own PID to the specified file
+echo $$ > /var/run/myscript.pid
+
+# Function to clean up and exit
+clean_exit() {
+    rm -f /var/run/myscript.pid
+    exit
+}
+
+# Trap SIGTERM: Display message and clean exit
+trap 'echo "I hate the kill command"; clean_exit' SIGTERM
+
+# Trap SIGINT (Ctrl+C): Display message only
+trap 'echo "Y U no love me?!"' SIGINT
+
+# Trap SIGQUIT: Clean exit
+trap 'clean_exit' SIGQUIT
+
+# Infinite loop
+while true
+do
+    echo "To infinity and beyond"
+    sleep 2
+done
+
